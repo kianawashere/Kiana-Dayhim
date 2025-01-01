@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #F4D35E;
+}
+
+.navbar-brand,
+.text-primary {
+    color: #000000 !important;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #F4D35E;
+}
