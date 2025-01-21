@@ -16,7 +16,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Kiana Dayhim</a>
+            <a class="navbar-brand fw-bold" href="index.html">Kiana Dayhim</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -33,9 +33,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
+
+                    <!-- dropdown -->
                     <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Portfolio
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="illustrations.html">Illustrations</a></li>
+                            <li><a class="dropdown-item" href="comics.html">Short Comics</a></li>
+                            <li><a class="dropdown-item" href="#">Animation</a></li>
+                            <li><a class="dropdown-item" href="#">Character Design</a></li>
+                            <li><a class="dropdown-item" href="#">Graphic Design</a></li>
+                            <li><a class="dropdown-item" href="illuBooks.html">Illustrated Books</a></li>
+                            <li><a class="dropdown-item" href="#">Edited Videos</a></li>
+                            </ul>
+                        </div>
+                    </li> 
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
@@ -46,77 +62,123 @@
 </header>
 
 <body>
-    <div class="container d-flex flex-column align-items-center">
 
-        <div class="col-12 col-lg-7 d-flex flex-column align-items-center mt-4 mb-4">
-            <h1>Store</h1>
-            <p class="lead" style="text-align: center;"> Postcards, T-Shirts, mugs, notebooks, phone cases, and etc. By
-                purchasing them you’re not only the owner of something unique, but also the story behind it! </p>
-        </div>
+        <!-- Modal -->
+    <div class="modal fade" id="cart-modal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-        <div class="container d-flex flex-column mt-4 mb-4">
-            <div class="col-12 col-4 d-flex flex-row justify-content-evenly mb-5">
-
-                <div class="container d-flex flex-column gap-3">
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/1.jpg" class="card-img-top" alt="mug">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">“Moonlight Thoughts” Mug</h5>
-                        <p class="card-text" style="font-size: 12px;">170,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/4.jpg" class="card-img-top" alt="Deev">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">“Deevs Be Reflecting” Notebook</h5>
-                        <p class="card-text" style="font-size: 12px;">150,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
-                </div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Kiana's Shop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="container d-flex flex-column gap-3">
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/2.jpg" class="card-img-top" alt="T-shirt">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">T-Shirt “از دل برود هر که مرا عیدی ندهد”</h5>
-                        <p class="card-text" style="font-size: 12px;">380,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/5.jpg" class="card-img-top" alt="T-shirt">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">"Deev" Phone Case</h5>
-                        <p class="card-text" style="font-size: 12px;">150,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
-                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p style="font-weight: bold;">“Moonlight Thoughts” Mug</p>
+                    <p>is successfully added to your cart.</p>
                 </div>
 
-                <div class="container d-flex flex-column gap-3">
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/3.jpg" class="card-img-top" alt="NoteBook">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">“Growth” Notebook</h5>
-                        <p class="card-text" style="font-size: 12px;">220,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">My Cart</button>
                 </div>
-                <div class="card d-flex flex-column align-items-center h-100" style="width: 18rem;">
-                    <img src="pics/store/7.jpg" class="card-img-top" alt="NoteBook">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h5 class="card-title">“عشق” Sticker</h5>
-                        <p class="card-text" style="font-size: 12px;">20,000 T</p>
-                        <a href="cart.html" class="btn btn-custom">Add to Cart</a>
-                    </div>
-                </div>
-                </div>
+
             </div>
         </div>
     </div>
 
+    
+      <!-- main text of the page -->
+    <div class="container d-flex flex-column align-items-center">
+
+        <div class="col-12 col-lg-7 text-center mt-5 mb-2">
+            <h1>Store</h1>
+            <p class="lead">
+                Postcards, T-Shirts, mugs, notebooks, phone cases, and etc. By purchasing them you’re not only the owner
+                of something unique, but also the story behind it!
+            </p>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5 mt-4">
+            <!-- Card 1 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="1.jpg" class="card-img-top" alt="mug">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">“Moonlight Thoughts” Mug</h5>
+                        <p class="card-text" style="font-size: 12px;">170,000 T</p>
+                        <a href="#" class="btn btn-custom mt-auto"
+                        data-bs-toggle="modal"
+                        data-bs-target="#cart-modal">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="4.jpg" class="card-img-top" alt="Deev">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">“Deevs Be Reflecting” Notebook</h5>
+                        <p class="card-text" style="font-size: 12px;">150,000 T</p>
+                        <a href="cart.html" class="btn btn-custom mt-auto">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="2.jpg" class="card-img-top" alt="T-shirt">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">T-Shirt “از دل برود هر که مرا عیدی ندهد”</h5>
+                        <p class="card-text" style="font-size: 12px;">380,000 T</p>
+                        <a href="cart.html" class="btn btn-custom mt-auto">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="5.jpg" class="card-img-top" alt="Phone Case">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">"Deev" Phone Case</h5>
+                        <p class="card-text" style="font-size: 12px;">150,000 T</p>
+                        <a href="cart.html" class="btn btn-custom mt-auto">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="3.jpg" class="card-img-top" alt="Notebook">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">“Growth” Notebook</h5>
+                        <p class="card-text" style="font-size: 12px;">220,000 T</p>
+                        <a href="cart.html" class="btn btn-custom mt-auto">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="7.jpg" class="card-img-top" alt="Sticker">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h5 class="card-title">“عشق” Sticker</h5>
+                        <p class="card-text" style="font-size: 12px;">20,000 T</p>
+                        <a href="cart.html" class="btn btn-custom mt-auto">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container pt-4">
@@ -163,7 +225,7 @@
 
                 <!-- footer image -->
                 <div class="col-12 col-lg-6">
-                    <img src="pics/footer.png" alt="footer" class="img-fluid" />
+                    <img src="footer.png" alt="footer" class="img-fluid" />
                 </div>
             </div>
         </div>
